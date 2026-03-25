@@ -3,12 +3,12 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAxlPLltuo6ivJizXo8m6_ah0se2W7BybQ",
-  authDomain: "voxara-e07ec.firebaseapp.com",
-  projectId: "voxara-e07ec",
-  storageBucket: "voxara-e07ec.firebasestorage.app",
-  messagingSenderId: "788073327882",
-  appId: "1:788073327882:web:dddf1b9d3ed749010b1ef3"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyAVGgy6Tp5GOMiOZOrIrL2Zyy-08tciX3s",
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "voxaraaa.firebaseapp.com",
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "voxaraaa",
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "voxaraaa.firebasestorage.app",
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "420321143449",
+  appId: import.meta.env.VITE_FIREBASE_APP_ID || "1:420321143449:web:3aaf74e3c2b94572682608"
 };
 
 const app = initializeApp(firebaseConfig);

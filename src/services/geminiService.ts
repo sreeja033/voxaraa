@@ -1,11 +1,11 @@
 import { GoogleGenAI, Modality, Type } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY || "" });
 
-if (!process.env.GEMINI_API_KEY) {
-  console.error("geminiService: GEMINI_API_KEY is missing!");
+if (!import.meta.env.VITE_GEMINI_API_KEY) {
+  console.error("geminiService: VITE_GEMINI_API_KEY is missing!");
 } else {
-  console.log("geminiService: GEMINI_API_KEY is configured.");
+  console.log("geminiService: VITE_GEMINI_API_KEY is configured.");
 }
 
 // Global cooldown to prevent rapid-fire requests
